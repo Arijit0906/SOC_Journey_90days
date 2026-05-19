@@ -13,7 +13,7 @@ Think of the OS like the conductor of an orchestra. The conductor doesn't play t
 ---
 # What is Kernel?
 
-The kernel is the core of the operating system that manages hardware and system resources.
+The kernel is the core of the operating system(OS) that manages hardware and system resources.
 
 ---
 
