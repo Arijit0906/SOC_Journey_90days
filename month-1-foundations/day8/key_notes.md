@@ -11,7 +11,14 @@ Think of the OS like the conductor of an orchestra. The conductor doesn't play t
 | Software | Files, Drivers, Apps | Coordination: Ensuring apps don't conflict and have access to data |
 
 ---
+# What is Kernel?
 
+The kernel is the core of the operating system that manages hardware and system resources.
+
+---
+
+<img width="506" height="900" alt="image" src="https://github.com/user-attachments/assets/301bdec2-f077-4708-9f39-ee82aa61d014" />
+---
 # What is Terminal?
 
 A Terminal is essentially a text-based user interface for interacting with computers. It allows users to execute commands and view the results, as well as control applications running on the computer.
@@ -529,8 +536,4 @@ When you type a command and press Enter:
 6. The command runs.
 7. Output or errors are displayed on the screen.
 
----
 
-# What is Kernel?
-
-The kernel is the core of the operating system that manages hardware and system resources.
