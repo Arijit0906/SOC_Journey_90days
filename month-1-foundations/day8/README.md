@@ -37,7 +37,7 @@ Day 8 was all about diving into **Linux fundamentals** and connecting them back 
 
 ---
 
-## 🎯 Next Steps
+## 🎯 Next Steps or Next Target
 Tomorrow I’ll move deeper into **process monitoring, networking commands, and security tools** on Linux. The goal is to connect these fundamentals with real SOC workflows like log analysis and threat detection.
 
 ---
