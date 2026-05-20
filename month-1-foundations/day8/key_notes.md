@@ -17,7 +17,7 @@ The kernel is the core of the operating system(OS) that manages hardware and sys
 
 ---
 
-<img width="506" height="900" alt="image" src="https://github.com/user-attachments/assets/301bdec2-f077-4708-9f39-ee82aa61d014" />
+<img width="506" height="600" alt="image" src="https://github.com/user-attachments/assets/301bdec2-f077-4708-9f39-ee82aa61d014" />
 
 ---
 # What is Terminal?
