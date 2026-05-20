@@ -44,8 +44,7 @@ Linux is an operating system kernel — the core software that connects hardware
 ---
 
 # What Happens When Linux Boots?
-
-Understanding the Linux boot process is like watching a relay race where each runner passes a baton to the next.
+Linux boot process is like watching a relay race where each runner passes a baton to the next.
 
 ## 1. BIOS / UEFI (The Hardware Check)
 
