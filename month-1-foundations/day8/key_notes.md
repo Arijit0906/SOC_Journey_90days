@@ -94,8 +94,8 @@ System-wide configuration files.
 
 | File/Directory | Purpose |
 |---|---|
-| `/etc/passwd` | List of all user accounts |
-| `/etc/shadow` | Stores encrypted passwords |
+| `/etc/passwd` | stores public user account information (like UIDs, home directories, and shells) and is readable by all users |
+| `/etc/shadow` | Stores encrypted passwords, /etc/shadow stores actual password hashes and aging policies. It is highly secured and restricted, readable only by the root user|
 | `/etc/hostname` | System hostname |
 | `/etc/network` | Network configuration |
 | `/etc/ssh` | SSH configuration |
