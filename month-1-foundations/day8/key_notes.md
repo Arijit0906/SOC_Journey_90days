@@ -110,8 +110,8 @@ System and application logs.
 
 | File | Purpose |
 |---|---|
-| `/var/log/auth.log` | Authentication logs |
-| `/var/log/syslog` | General system logs |
+| `/var/log/auth.log` | Authentication logs (like SSH logins, sudo usage, failed password attempt)|
+| `/var/log/syslog` | General system logs (like Kernel messages, service starts/stops, system errors, and hardware events)|
 | `/var/log/kern.log` | Kernel logs |
 | `/var/log/nginx/` | Nginx logs |
 | `/var/log/apache2/` | Apache logs |
