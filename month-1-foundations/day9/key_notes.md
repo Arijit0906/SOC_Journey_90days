@@ -107,59 +107,173 @@ sudo grep "incorrect password attempts" /var/log/auth.log
 sudo grep -E "authentication failure|password check failed|incorrect password attempts|Failed password" /var/log/auth.log
 ```
 ---
-Core grep Options (Must Know)
-Command	Purpose
--i	Ignore case (insensitive)
--n	Show line numbers
--v	Invert match
--c	Count matches
--r	Recursive search
--E	Extended regex
--w	Exact word
--A	Lines after
--B	Lines before
--C	Context lines
+# Core `grep` Options (Must Know)
+
+| Command Option | Purpose                          |
+|----------------|----------------------------------|
+| `-i`           | Ignore case (insensitive)        |
+| `-n`           | Show line numbers                |
+| `-v`           | Invert match                     |
+| `-c`           | Count matches                    |
+| `-r`           | Recursive search                 |
+| `-E`           | Extended regex                   |
+| `-w`           | Exact word match                 |
+| `-A`           | Show lines after match           |
+| `-B`           | Show lines before match          |
+| `-C`           | Show context lines around match  |
 
 ---
 
-	• Error
+# Advanced `grep` Examples & Regex Cheat Sheet
 
--c Count Failed Logins
+## Count Failed Logins
+
+```bash
 grep -c "Failed password" /var/log/auth.log
+```
 
-🚀 The Command to Hide Errors
-Run this command to search for "success" while ignoring case, and automatically filter out anything containing "error"
+- `-c` → Counts how many matching lines exist.
+- Useful for checking failed SSH login attempts.
+
+---
+
+# Ignore Errors While Searching Success Logs
+
+```bash
 grep -i "success" /var/log/syslog | grep -iv "error"
+```
 
-grep -iv "error": Inverts the match. It throws away any line containing error, Error, or ERROR, leaving you with pure success messages.
+### Explanation
 
--E -Extended regex
+| Command Part | Meaning |
+|---|---|
+| `grep -i "success"` | Searches for `success` ignoring case |
+| `grep -iv "error"` | Removes lines containing `error`, `Error`, or `ERROR` |
+
+### Result
+Shows only clean success messages without any errors.
+
+---
+
+# Extended Regex (`-E`)
+
+```bash
 grep -E "(sshd|cron|systemd)" /var/log/syslog
+```
 
-Basic Regex Symbols
-Symbol	Meaning
-^	Start of line( grep "^Jan" auth.log )
-$	End of line( grep "root$" auth.log )
-.	Any character
-*	Zero or more
-+	One or more
-[]	Character set
-`	`
-\	Escape
+### Explanation
 
-Common Beginner Mistakes
-Wrong - uniq file
-Better - sort file | uniq
+- `-E` → Enables Extended Regular Expressions.
+- `(sshd|cron|systemd)` → Matches any one of these words.
 
+### Matches
+- `sshd`
+- `cron`
+- `systemd`
 
-LAB
+---
 
+# Basic Regex Symbols
+
+| Symbol | Meaning | Example |
+|---|---|---|
+| `^` | Start of line | `grep "^Jan" auth.log` |
+| `$` | End of line | `grep "root$" auth.log` |
+| `.` | Any single character | `grep "r..t" file.txt` |
+| `*` | Zero or more characters | `grep "lo*g" file.txt` |
+| `+` | One or more characters | `grep -E "lo+g" file.txt` |
+| `[]` | Character set | `grep "[0-9]" file.txt` |
+| `\` | Escape special character | `grep "\$HOME" file.txt` |
+
+---
+
+# Quick Tips
+
+## Search Recursively
+
+```bash
+grep -r "password" /etc/
+```
+
+## Show Line Numbers
+
+```bash
+grep -n "root" /etc/passwd
+```
+
+## Exact Word Match
+
+```bash
+grep -w "root" /etc/passwd
+```
+
+## Show Context Lines
+
+```bash
+grep -C 2 "error" /var/log/syslog
+```
+
+- `-C 2` → Shows 2 lines before and after the match.
+---
+# Common Beginner Mistakes
+
+| Wrong Command | Better Command | Why? |
+|---|---|---|
+| `uniq file` | `sort file | uniq` | `uniq` only removes consecutive duplicate lines, so sorting first groups duplicates together. |
+
+---
+
+# LAB — Find Top Failed Login Attackers
+
+```bash
 grep "Failed password" auth.log | awk '{print $11}' | sort | uniq -c | sort -nr | head
+```
 
-• grep "Failed password": Filters the log to show only lines containing failed login attempts.
-• awk '{print $11}': Extracts the 11th column of those lines, which is typically the attacker's IP address.
-• sort: Alphabetically groups identical IP addresses together so they can be counted.
-• uniq -c: Counts the consecutive occurrences of each IP address, creating a frequency list.
-• sort -nr: Sorts the counted list numerically (-n) and in reverse order (-r) from highest to lowest.
-• head: Displays only the top 10 results, revealing your most frequent attackers
+---
+
+# Step-by-Step Breakdown
+
+| Command | Purpose |
+|---|---|
+| `grep "Failed password"` | Filters the log to show only failed login attempts |
+| `awk '{print $11}'` | Extracts the 11th column, usually the attacker's IP address |
+| `sort` | Groups identical IP addresses together |
+| `uniq -c` | Counts repeated IP addresses |
+| `sort -nr` | Sorts numerically in reverse order (highest first) |
+| `head` | Displays the top 10 attackers |
+
+---
+
+# Example Output
+
+```bash
+120 192.168.1.10
+85  10.0.0.5
+44  172.16.0.2
+```
+
+### Meaning
+- `120` → Number of failed login attempts
+- `192.168.1.10` → Attacker IP address
+
+---
+
+# Why This Pipeline Is Powerful
+
+This command helps:
+
+- Detect brute-force SSH attacks
+- Identify suspicious IP addresses
+- Analyze authentication logs quickly
+- Practice real-world Linux log analysis
+
+---
+
+To save the results into a file:
+
+```bash
+grep "Failed password" auth.log | awk '{print $11}' | sort | uniq -c | sort -nr | head > attackers.txt
+```
+
+This creates a report named `attackers.txt`.
 
