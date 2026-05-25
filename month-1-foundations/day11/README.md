@@ -1,4 +1,4 @@
-# 📅 Day 11 – SOC Analyst 30-Day Challenge
+# 📅 Day 11 – Windows Event Logs and IDs
 
 Today I explored **Windows Event Logs and Event IDs** — the backbone of SOC investigations on Windows systems. These logs capture authentication attempts, process creation, service changes, and more, making them critical for detecting attacker activity.
 
