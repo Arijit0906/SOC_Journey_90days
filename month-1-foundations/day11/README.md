@@ -34,7 +34,7 @@ Today I explored **Windows Event Logs and Event IDs** — the backbone of SOC in
 ---
 
 ## 🎯 Future Work
-Next, I’ll dive into **Sysmon** to extend native logging:
+Next day, I’ll dive into **Sysmon** to extend native logging:
 - What Sysmon adds over native logging
 - Key Event IDs:
   - 1 → ProcessCreate  
