@@ -229,7 +229,7 @@ Use this command to check for hidden or suspicious files.
 |---|---|
 | BIOS | Basic Input/Output System |
 | UEFI | Unified Extensible Firmware Interface |
-| GRUB | GRand Unified Bootloader |
+| GRUB | Grand Unified Bootloader |
 
 ---
 # AWK Command Cheat Sheet
