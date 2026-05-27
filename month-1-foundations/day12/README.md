@@ -1,4 +1,4 @@
-# 📅 Day 12 – SOC Analyst 30-Day Challenge
+# 📅 Day 12 – All about Sysmon
 
 Today I focused on **Sysmon (System Monitor)** and why it’s one of the most important telemetry tools for SOC analysts, threat hunters, and DFIR teams.
 
