@@ -1,4 +1,4 @@
-# 📅 Day 8 – SOC Analyst 90-Day Challenge
+# 📅 Day 8 – Linux fundamentals
 
 Day 8 was all about diving into **Linux fundamentals** and connecting them back to SOC analyst skills. I wanted to understand not just how to run commands, but how the OS works under the hood and why it matters in security operations.
 
