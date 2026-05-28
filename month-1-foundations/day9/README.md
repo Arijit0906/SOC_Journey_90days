@@ -45,5 +45,5 @@ Tomorrow I’ll:
 
 ---
 
-🔥 *Day 9 complete! Feeling the SOC vibe now — logs don’t look like random noise anymore, they’re evidence waiting to be read.*
+🔥 *Day 9 complete!*
 
