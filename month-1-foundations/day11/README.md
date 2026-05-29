@@ -41,7 +41,7 @@ Next day, I’ll dive into **Sysmon** to extend native logging:
   - 3 → NetworkConnect  
   - 7 → ImageLoad  
   - 11 → FileCreate  
-  - 13 → RegSet  
+  - 13 → RegSet and many more
 - Sysmon configuration files
 - SwiftOnSecurity Sysmon config
 
