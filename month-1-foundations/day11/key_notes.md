@@ -31,18 +31,18 @@
 
 # 📝 Key Notes – Log Formats
 
-## 📖 Example Syslog Message Format
+ 📖 Example Syslog Message Format
 A widely adopted logging protocol for system and network logs.
 
 ```bash
 damianhall@WEBSRV-02:~/logs$ cat syslog.txt
 May 31 12:34:56 WEBSRV-02 CRON[2342593]: (root) CMD ([ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/sbin/invoke-rc.d anacron start >/dev/null; fi)
 ```
-##📖 Example JSON Log Format
+📖 Example JSON Log Format
 ```bash
 {"time": "2023-05-31T12:34:56Z", "user": "adversary", "action": "GET", "status": 200, "ip": "34.253.159.159", "uri": "http://gitlab.swiftspend.finance:80/"}
 ```
-##📖 Example W3C Extended Log Format (ELF)
+📖 Example W3C Extended Log Format (ELF)
 ```bash
 damianhall@WEBSRV-02:~/logs$ cat elf.log
 #Version: 1.0
@@ -51,7 +51,7 @@ damianhall@WEBSRV-02:~/logs$ cat elf.log
 
 ```
 
-##📖 Example XML Log Format
+📖 Example XML Log Format
 ```bash
 <log>
   <time>2023-05-31T12:34:56Z</time>
@@ -63,7 +63,7 @@ damianhall@WEBSRV-02:~/logs$ cat elf.log
 </log>
 
 ```
-##📖Example Windows Event Log (EVTX) Format
+📖Example Windows Event Log (EVTX) Format
 ```bash
 PS C:\WINDOWS\system32> Get-WinEvent -Path "C:\Windows\System32\winevt\Logs\Application.evtx"
 
