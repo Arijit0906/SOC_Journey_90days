@@ -468,3 +468,279 @@ Recommended Action:
 ```
 
 ---
+# 2. Pass-the-Ticket (PtT)
+
+Pass-the-Ticket (PtT) is the Kerberos version of Pass-the-Hash.
+
+## Concept
+
+Instead of stealing a password or NTLM hash, the attacker steals a Kerberos ticket and reuses it to authenticate.
+
+### Attack Flow
+
+```text
+User Login
+     ↓
+Receives TGT
+     ↓
+Attacker Steals TGT
+     ↓
+Attacker Reuses Ticket
+     ↓
+Authentication Success
+```
+
+### Why It Works
+
+Kerberos trusts valid tickets issued by the Key Distribution Center (KDC).
+
+If an attacker obtains a valid Ticket Granting Ticket (TGT) or service ticket, they may be able to impersonate the user without knowing the password.
+
+### Detection
+
+Look for:
+
+- Ticket usage from different hosts
+- Unusual Kerberos activity
+- Lateral movement patterns
+- Abnormal ticket lifetimes
+- Logins occurring from unexpected systems
+
+### SOC Indicators
+
+```text
+Kerberos Ticket Used
+       +
+Different Source Host
+       +
+Multiple Systems Accessed
+       =
+Potential Pass-the-Ticket Attack
+```
+
+---
+
+# 3. Kerberoasting
+
+## What is Kerberoasting?
+
+Kerberoasting is a post-exploitation attack that targets Service Accounts associated with Service Principal Names (SPNs).
+
+### Why Service Accounts?
+
+Many organizations use service accounts such as:
+
+- SQLService
+- BackupService
+- WebService
+
+These accounts often have:
+
+- Old passwords
+- Weak passwords
+- Elevated privileges
+
+### Attack Flow
+
+```text
+Find SPN
+    ↓
+Request TGS
+    ↓
+Extract Ticket
+    ↓
+Offline Crack
+    ↓
+Password Recovered
+```
+
+### Why It Works
+
+A user can request a Ticket Granting Service (TGS) ticket for a service account.
+
+The ticket contains data encrypted using the service account's password hash.
+
+Attackers can extract the ticket and perform offline password cracking without generating additional authentication attempts.
+
+### Detection
+
+Look for:
+
+- Large numbers of TGS requests
+- Requests for multiple service accounts
+- Abnormal Kerberos activity
+- Unusual service ticket requests
+
+### SOC Indicators
+
+```text
+Many TGS Requests
+        +
+Service Accounts Targeted
+        +
+Password Cracking Activity
+        =
+Potential Kerberoasting
+```
+
+---
+
+# 4. AS-REP Roasting
+
+## What is AS-REP Roasting?
+
+AS-REP Roasting is similar to Kerberoasting but targets accounts that have Kerberos pre-authentication disabled.
+
+### Why It Works
+
+Normally:
+
+```text
+User
+   ↓
+Pre-Authentication
+   ↓
+KDC Issues Response
+```
+
+With pre-authentication disabled:
+
+```text
+Attacker
+    ↓
+Requests AS-REP
+    ↓
+Receives Encrypted Response
+    ↓
+Offline Password Cracking
+```
+
+### Attack Flow
+
+```text
+Find Vulnerable User
+        ↓
+Request AS-REP
+        ↓
+Receive Response
+        ↓
+Offline Crack
+        ↓
+Password Recovered
+```
+
+### Detection
+
+Look for:
+
+- Accounts with pre-authentication disabled
+- Unusual AS-REQ requests
+- Enumeration of user accounts
+- Password cracking activity
+
+### SOC Indicators
+
+```text
+AS-REP Requests
+        +
+No Pre-Authentication
+        +
+Password Cracking
+        =
+Potential AS-REP Roasting
+```
+
+---
+
+# 5. DCSync Attack
+
+## What is DCSync?
+
+A DCSync attack occurs when an attacker pretends to be a Domain Controller and requests password hashes from a legitimate Domain Controller.
+
+### Visual
+
+```text
+Attacker
+    ↓
+"I am DC"
+    ↓
+Request Password Hashes
+    ↓
+Domain Controller Responds
+```
+
+### Result
+
+The attacker can obtain:
+
+- All User Hashes
+- Domain Administrator Hashes
+- Service Account Hashes
+- KRBTGT Hash
+
+Including:
+
+- KRBTGT
+- Administrator
+- Domain Admins
+
+### Why It Is Dangerous
+
+The KRBTGT account is used by Kerberos to sign tickets.
+
+If attackers obtain the KRBTGT hash, they may create forged Kerberos tickets and maintain long-term access to the domain.
+
+### Attack Flow
+
+```text
+Compromise Privileged Account
+          ↓
+Gain Replication Rights
+          ↓
+Perform DCSync
+          ↓
+Receive Password Hashes
+          ↓
+Domain Compromise
+```
+
+### Detection
+
+Look for:
+
+- Directory replication requests from non-Domain Controllers
+- Replication activity originating from workstations
+- Unusual use of replication privileges
+- Requests for sensitive account hashes
+
+### SOC Indicators
+
+```text
+Replication Request
+         +
+Non-DC Source
+         +
+Sensitive Account Access
+         =
+Potential DCSync Attack
+```
+
+### Severity
+
+```text
+Alert Name: DCSync Activity Detected
+
+Severity:
+🚨 Critical
+
+Impact:
+Potential Full Domain Compromise
+
+Recommended Action:
+- Investigate Source System
+- Reset Compromised Credentials
+- Review Replication Permissions
+- Monitor Domain Controllers
+- Consider KRBTGT Password Reset
+```
