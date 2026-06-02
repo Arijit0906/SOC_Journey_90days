@@ -277,7 +277,7 @@ NTLM relies primarily on hashing functions rather than ticket-based authenticati
 
 Commonly associated with:
 
-- NT Hashes
+- NT Hashes(MD4/MD5 hash)
 - Challenge-Response Authentication
 
 ### Kerberos
