@@ -1,4 +1,4 @@
-# 📅 Day 9 – Linux Important Commands
+# 📅 Day 9 – Linux Important Commands & log files
 
 Today was all about **Linux log analysis** — the part that really connects system administration with SOC investigations. Logs are the lifeblood of detection, so I focused on understanding how they’re generated, stored, rotated, and analyzed with tools like `grep`, `awk`, and `sed`.
 
