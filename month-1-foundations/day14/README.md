@@ -32,13 +32,12 @@ Today I studied **Active Directory (AD)** and why it is critical for SOC analyst
 ## 🎯 Next Steps
 Tomorrow I’ll:
 - Continue with **revision** of everything learned in the last 6–7 days (Windows fundamentals, Event Logs, Sysmon, Log formats, Log management, PowerShell, Active Directory).
-- Start learning a new topic **MITRE att&ck** framwork
+- Start learning a new topic **MITRE att&ck** framwork 
 ---
 
 ### 🔗 Resources
 - [Active Directory Basics](ca://s?q=Active_Directory_basics_for_SOC)
 - [Kerberos Authentication](ca://s?q=Kerberos_authentication_basics)
-- [AD Event IDs](ca://s?q=Important_AD_event_IDs_for_SOC)
 - [AD Attack Techniques](ca://s?q=Active_Directory_attack_techniques)
 
 ---
