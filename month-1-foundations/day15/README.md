@@ -30,3 +30,6 @@ Steps I practiced:
    scp filename.txt username@ip:/location_where_to_save_the_file
    ```
 4. succesfully transferred file.
+
+### What is the use of scp command?
+The scp (Secure Copy) command is a command-line utility used to securely transfer files and directories between two locations on a network. It uses SSH (Secure Shell) for data transfer, providing the same level of encryption and authentication as an SSH connection
