@@ -1,4 +1,4 @@
-# 📅 Day 15 – SOC Analyst 30-Day Challenge
+# 📅 Day 15 – MITRE ATT&CK Basics
 
 Today I explored the **MITRE ATT&CK Framework** and practiced transferring files between Windows and Kali.
 
@@ -29,4 +29,4 @@ Steps I practiced:
    ```bash
    scp filename.txt username@ip:/location_where_to_save_the_file
    ```
-4. succesfully transferred file
+4. succesfully transferred file.
