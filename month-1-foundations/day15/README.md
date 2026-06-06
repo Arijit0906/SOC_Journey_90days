@@ -33,3 +33,9 @@ Steps I practiced:
 ---
 ### 🔹 What is the use of scp command?
 The scp (Secure Copy) command is a command-line utility used to securely transfer files and directories between two locations on a network. It uses SSH (Secure Shell) for data transfer, providing the same level of encryption and authentication as an SSH connection
+---
+### Next Steps
+Tomorrow I’ll:
+
+- Go deeper into MITRE ATT&CK in depth.
+- Learn how to use Splunk Forwarder and set it up for log collection.
