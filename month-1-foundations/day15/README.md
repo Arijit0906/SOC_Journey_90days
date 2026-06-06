@@ -21,13 +21,13 @@ Today I explored the **MITRE ATT&CK Framework** and practiced transferring files
 ### 🔹 File Transfer (Windows → Kali)
 Steps I practiced:
 1. Configure both VM network adapters as **Bridge Adapter**.
-2. Start **SSH service** in Kali and check IP.
+2. Start **SSH service** in Kali and check IP using ifconfig command.
  ```bash
    sudo service ssh start
    ```
 3. On Windows 10 VM, use `scp` in CMD:
    ```bash
-   scp filename.txt username@ip:/location_where_to_save_the_file
+   scp filename.txt username@kali_machine_ip:/location_where_to_save_the_file
    ```
 4. succesfully transferred file.
 ---
