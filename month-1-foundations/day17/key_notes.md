@@ -152,6 +152,7 @@ An attacker gains access to an employee account.
 ---
 
 # What is an IOC?
+<img width="1024" height="512" alt="image" src="https://github.com/user-attachments/assets/b87e8c68-f65e-4c0e-9514-8ce41b9b6137" />
 
 An **Indicator of Compromise (IOC)** is a piece of forensic evidence that suggests a system, network, or account may have been compromised by an attacker.
 
