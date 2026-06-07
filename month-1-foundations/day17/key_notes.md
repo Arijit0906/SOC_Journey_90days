@@ -1,4 +1,5 @@
 # What is Threat Intelligence?
+<img width="570" height="380" alt="image" src="https://github.com/user-attachments/assets/e5746320-5108-4e85-9067-37eb45bbc621" />
 
 Threat intelligence, also known as **Cyber Threat Intelligence (CTI)**, is evidence-based knowledge about cybersecurity threats, attackers, and their methods.
 
