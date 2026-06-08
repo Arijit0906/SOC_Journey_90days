@@ -33,7 +33,6 @@ Tomorrow I’ll:
 ### 🔗 Resources
 - [Threat Intelligence Sources](ca://s?q=Threat_intelligence_sources_explained)
 - [MISP & OpenCTI](ca://s?q=MISP_and_OpenCTI_basics)
-- [STIX & TAXII](ca://s?q=STIX_and_TAXII_explained)
 - [Threat Hunting Methodology](ca://s?q=Threat_hunting_methodology_with_IOCs_and_TTPs)
 
 ---
