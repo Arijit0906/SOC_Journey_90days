@@ -34,7 +34,7 @@ Governments regularly publish cyber threat alerts and advisories.
 ### Examples include:
 
 #### CERT-In (Indian Computer Emergency Response Team)
-is the national nodal agency under the Ministry of Electronics and Information Technology (MeitY)
+is the national nodal agency under the Ministry of Electronics and Information Technology (MeitY) responsible for responding to cyber security incidents, forecasting threats, and coordinating defenses across the Indian cyber community
 
 #### CISA (CyberSecurity and Infrastructure Agency)
 Established in 2018
