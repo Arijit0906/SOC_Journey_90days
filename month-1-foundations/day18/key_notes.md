@@ -130,6 +130,6 @@ Indicators
 <img width="1069" height="539" alt="image" src="https://github.com/user-attachments/assets/659afcc3-e647-4e44-860e-dbcc368e8ae7" />
 
 ## Threat Intelligence-Led SOAR Architecture 
-*Image courtesy of ThreatConnect*
-<img width="1288" height="985" alt="image" src="https://github.com/user-attachments/assets/bf277e04-adf2-4bfb-a6da-811bd93b8234" />
 
+<img width="1288" height="985" alt="image" src="https://github.com/user-attachments/assets/bf277e04-adf2-4bfb-a6da-811bd93b8234" />
+*Image courtesy of ThreatConnect*
