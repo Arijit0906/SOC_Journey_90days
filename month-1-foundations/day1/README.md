@@ -55,7 +55,6 @@ Today I studied **Incident Response (IR) Fundamentals** — the core responsibil
 
 ## 🎯 Next Steps
 Tomorrow I’ll:
-- Read **TTP reports** and **CVEs**
 - Cover **practical analogies of Threat Intelligence** with hands‑on examples
 
 ---
