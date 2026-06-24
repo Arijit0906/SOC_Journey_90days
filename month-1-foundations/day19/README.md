@@ -50,6 +50,17 @@ try:
 except FileNotFoundError:
 	print("Find not found in the system")
 ```
+## Output
+```
+🚨 ALERT! Critical IOC detected: 8.8.8.8 found in line: 
+2026-06-23 09:06:15 INFO Connection established from 8.8.8.8
+
+🚨 ALERT! Critical IOC detected: 185.220.101.1 found in line: 
+2026-06-23 09:11:15 INFO Connection established from 185.220.101.1
+
+ALL Valid IPs are :  {'185.220.101.1', '8.8.8.8', '10.0.0.5', '203.0.113.5', '172.16.5.100', '1.2.3.4', '192.168.1.15', '192.168.1.55', '192.168.1.10', '45.33.32.1', '192.168.100.20', '10.10.10.15', '172.16.1.20'}
+
+```
 ## Day 21 Goal – Regex Deep Dive
 
 ### Topics
